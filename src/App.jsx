@@ -1,157 +1,57 @@
-import {
-  Navigate,
-  Route,
-  Routes,
-  useLocation,
-  useNavigate,
-} from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Sidebar from "./components/Sidebar";
-import Hero from "./components/Hero";
-import Notification from "./components/Notification";
-import Register from "./components/Register";
-import { createContext, useEffect, useState } from "react";
-import Sidebar2 from "./components/Sidebar2";
+import { Route, Routes } from "react-router-dom";
+import Navbar from "./component/Navbar";
+import { createContext, lazy, Suspense, useState } from "react";
+import Preloader from "./component/design/Preloader";
+import PageNotFound from "./component/PageNotFound";
+
+const Home = lazy(() => import("./component/Home"));
+const Skills = lazy(() => import("./component/Skills"));
+const Resume = lazy(() => import("./component/Resume"));
+const Projects = lazy(() => import("./component/Projects"));
+const Contact = lazy(() => import("./component/Contact"));
 
 export const AppContext = createContext();
 
-function App() {
-  const navigate = useNavigate();
-  const location = useLocation().pathname;
-  const [wrapped, setWrapped] = useState(false);
-  const [isLogin, setIsLogin] = useState(false);
-  const [userData, setUserData] = useState({
-    names: "",
-    username: "",
-    email: "",
-    location: "",
-    gender: "",
-  });
-  const [image, setImage] = useState(null);
-  const [isLogged, setIsLogged] = useState(true);
-  const [imagePreview, setImagePreview] = useState(null);
+const App = () => {
+  const [openNavigation, setOpenNavigation] = useState(true);
+  const [menu, setMenu] = useState(null);
 
-  useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem("user"));
-    if (storedUser) {
-      setUserData(storedUser);
-    }
-    const savedImage = localStorage.getItem("uploadedImage");
-    if (savedImage) {
-      setImagePreview(savedImage);
-    }
-  }, []);
-
-  const handleAddUser = (event) => {
-    event.preventDefault();
-    setUserData((prevFormData) => {
-      return {
-        ...prevFormData,
-        [event.target.name]: event.target.value,
-      };
-    });
-  };
-  const uploadImage = () => {
-    console.log(userData.img);
-  };
-  const handleImageChange = (e) => {
-    const file = e.target.files[0]; // Get the selected file
-    if (file) {
-      const reader = new FileReader();
-      reader.readAsDataURL(file); // Convert the file to Base64
-      reader.onloadend = () => {
-        setImage(reader.result); // Set the image to Base64 string
-      };
-    }
-  };
-
-  const saveImageToLocalStorage = () => {
-    if (image) {
-      localStorage.setItem("uploadedImage", image);
-      userData.img = image;
-      alert("Image saved to localStorage!");
-    }
-  };
-  const handleSubmit = () => {
-    if (isLogin) {
-      // Check if user exists in local storage
-      const storedUser = JSON.parse(localStorage.getItem("user"));
-      if (
-        storedUser &&
-        (storedUser.email === userData.email ||
-          storedUser.username === userData.email) &&
-        storedUser.password === userData.password
-      ) {
-        alert("Login successful!");
-        setIsLogged(true);
-        setUserData(storedUser);
-        navigate("/");
-      } else {
-        alert("Invalid username or password.");
-      }
-    } else {
-      // Save user to local storage
-      localStorage.setItem("user", JSON.stringify(userData));
-      alert("Signup successful! You can now log in.");
-      console.log(userData);
-      saveImageToLocalStorage();
-      setIsLogged(true);
-    }
-  };
-  useEffect(() => {
-    const storedUser = JSON.parse(localStorage.getItem("user"));
-    if (storedUser) {
-      setIsLogged(true);
-    }
-  }, []);
   return (
-    <>
+    <main className="md:max-w-[960px] max-w-full max-md:min-w-full h-full relative w-full min-h-[90vh]">
       <Navbar
-        username={userData.username}
-        isLogged={isLogged}
-        imagePreview={imagePreview}
+        openNavigation={openNavigation}
+        setOpenNavigation={setOpenNavigation}
+        menu={menu}
+        setMenu={setMenu}
       />
-      <Sidebar wrapped={wrapped} setWrapped={setWrapped} />
       <div
-        className={`relative max-w-full pt-16 bg-zinc-200 ${
-          wrapped ? "sm:pl-[6rem] pl-[4rem]" : "max-sm:pl-[4rem] pl-[15rem]"
-        } lg:pr-[12rem]`}
+        className="absolute top-[4rem] bottom-10 h-full max-h-[90%] w-full"
+        onClick={() => {
+          if (openNavigation) {
+            setOpenNavigation(false);
+          }
+          if (menu) {
+            setMenu(false);
+          }
+        }}
       >
-        <AppContext.Provider
-          value={{
-            handleAddUser,
-            handleSubmit,
-            uploadImage,
-            userData,
-            wrapped,
-            setWrapped,
-            handleImageChange,
-            isLogged,
-            setIsLogin,
-          }}
-        >
-          <Routes>
-            <Route
-              exact
-              path="/"
-              element={
-                isLogged ? (
-                  <Hero />
-                ) : (
-                  <Navigate replace to={"/register/sign_up"} />
-                )
-              }
-            />
-            <Route path="/profile/notification" element={<Notification />} />
-            <Route path="/register/:logType" element={<Register />} />
-          </Routes>
-        </AppContext.Provider>
+        <Suspense fallback={<Preloader />}>
+          <AppContext.Provider
+            value={{ openNavigation, setOpenNavigation, menu, setMenu }}
+          >
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/skills" element={<Skills />} />
+              <Route path="/resume" element={<Resume />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<PageNotFound />} />
+            </Routes>
+          </AppContext.Provider>
+        </Suspense>
       </div>
-      {location === "/" && (
-        <Sidebar2 wrapped={wrapped} setWrapped={setWrapped} />
-      )}
-    </>
+    </main>
   );
-}
+};
 
 export default App;

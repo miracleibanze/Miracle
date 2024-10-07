@@ -14,11 +14,11 @@ export default {
           "@apply max-w-[77.5rem] mx-auto  xl:max-w-[87.5rem]": {},
         },
         ".h1": {
-          "@apply font-semibold text-[2.5rem] leading-[3.25rem] md:text-[2.75rem] md:leading-[3.75rem] lg:text-[3.25rem] lg:leading-[4.0625rem] xl:text-[3.75rem] xl:leading-[4.5rem]":
+          "@apply font-semibold text-[2.5rem] md:text-[2.75rem] lg:text-[3.25rem] xl:text-[3.75rem]":
             {},
         },
         ".h2": {
-          "@apply text-[1.75rem] leading-[2.5rem] md:text-[2rem] md:leading-[2.5rem] lg:text-[2.5rem] lg:leading-[3.5rem] xl:text-[3rem] xl:leading-tight":
+          "@apply text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] xl:text-[3rem] xl:leading-tight":
             {},
         },
         ".h3": {
@@ -34,7 +34,7 @@ export default {
           "@apply font-semibold text-lg leading-8": {},
         },
         ".body-1": {
-          "@apply text-[0.875rem] leading-[1.5rem] md:text-[1rem] md:leading-[1.75rem] lg:text-[1.25rem] lg:leading-8":
+          "@apply text-[0.875rem] md:text-[1rem] lg:text-[1.25rem] lg:leading-8":
             {},
         },
         ".body-2": {
@@ -44,7 +44,7 @@ export default {
           "@apply text-sm": {},
         },
         ".tagline": {
-          "@apply font-light text-xs tracking-tight uppercase": {},
+          "@apply font-light text-sm tracking-tight uppercase": {},
         },
         ".button": {
           "@apply text-xs font-bold uppercase tracking-wider": {},
