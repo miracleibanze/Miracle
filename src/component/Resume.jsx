@@ -36,12 +36,7 @@ const Resume = () => {
         </div>
         {viewIndex === 0 && (
           <div className="relative col-span-2 row-span-2 h5 italic clear-both light flex items-center justify-center text-center p-4 font-grotesk rounded-md">
-            "Computer Science Dedicated front-end web developer skilled in
-            React.js, Tailwind CSS, and Vite. Experienced in building
-            user-friendly web applications with effective routing and state
-            management. Eager to leverage modern development tools, including
-            Sass and JavaScript optimization with SWC, to create innovative
-            solutions that enhance user engagement."
+            "Motivated front-end web developer with a strong foundation in React.js, Tailwind CSS, and Vite. Proven experience in creating responsive, user-friendly applications with efficient routing and state management. Passionate about leveraging modern development tools to enhance user engagement and drive innovative solutions."
           </div>
         )}
         {viewIndex === 1 && (
