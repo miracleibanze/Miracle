@@ -1,8 +1,9 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import Navbar from "./component/Navbar";
-import { createContext, lazy, Suspense, useState } from "react";
+import { createContext, lazy, Suspense, useCallback, useState } from "react";
 import Preloader from "./component/design/Preloader";
 import PageNotFound from "./component/PageNotFound";
+import Redirecting from "./component/Redirecting";
 
 const Home = lazy(() => import("./component/Home"));
 const Skills = lazy(() => import("./component/Skills"));
@@ -13,11 +14,20 @@ const Contact = lazy(() => import("./component/Contact"));
 export const AppContext = createContext();
 
 const App = () => {
-  const [openNavigation, setOpenNavigation] = useState(true);
+  const navigate = useNavigate();
+  const [openNavigation, setOpenNavigation] = useState(false);
   const [menu, setMenu] = useState(null);
 
+  const [directDestination, setDirectDestination] = useState("");
+
+  const redirect = (source, destination) => {
+    console.log(destination);
+    setDirectDestination(destination);
+    navigate(`/${source}/redirecting/external/source`);
+  };
+
   return (
-    <main className="md:max-w-[960px] max-w-full max-md:min-w-full h-full relative w-full min-h-[90vh]">
+    <main className="lg:max-w-screen-lg max-w-full max-md:min-w-full h-full relative w-full min-h-[90vh]">
       <Navbar
         openNavigation={openNavigation}
         setOpenNavigation={setOpenNavigation}
@@ -37,7 +47,13 @@ const App = () => {
       >
         <Suspense fallback={<Preloader />}>
           <AppContext.Provider
-            value={{ openNavigation, setOpenNavigation, menu, setMenu }}
+            value={{
+              openNavigation,
+              setOpenNavigation,
+              menu,
+              setMenu,
+              redirect,
+            }}
           >
             <Routes>
               <Route exact path="/" element={<Home />} />
@@ -45,6 +61,10 @@ const App = () => {
               <Route path="/resume" element={<Resume />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
+              <Route
+                path="/:source/redirecting/external/source"
+                element={<Redirecting directDestination={directDestination} />}
+              />
               <Route path="*" element={<PageNotFound />} />
             </Routes>
           </AppContext.Provider>

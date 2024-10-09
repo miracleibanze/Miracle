@@ -16,7 +16,7 @@ const Button = ({
 
   const spanClasses = `relative py-1 ${underline && "navLink-Underline"} ${
     zIndex ? zIndex : "z-10"
-  } ${white && "bg-white -my-3 py-3"}`;
+  } ${white && "bg-white -my-3 py-3 -mx-2 px-3"}`;
 
   const renderButton = () => (
     <button className={classes} onClick={onClick}>
@@ -26,7 +26,7 @@ const Button = ({
   );
 
   const renderLink = () => (
-    <a href={href} className={classes} onClick={onClick}>
+    <a href={href} download className={classes} onClick={onClick}>
       <span className={spanClasses}>{children}</span>
       {ButtonSvg(white)}
     </a>

@@ -2,7 +2,6 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { navlinks } from "./constants";
 import Button from "./design/Button";
 import ButtonGradient from "./design/ButtonGradient";
-import { useEffect, useLayoutEffect, useState } from "react";
 import Toggle from "../assets/svg/Toggle";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { Gear } from "../assets/svg/Svgs";
@@ -25,10 +24,10 @@ const Navbar = ({ openNavigation, setOpenNavigation, menu, setMenu }) => {
   };
 
   const navContent = (
-    <div className="fixed right-0 sm:hidden top-0 link-0 bottom-0 dark-bg z-[100] w-5/6 flex flex-col justify-center gap-4">
+    <div className="fixed right-0 sm:hidden top-0 animate-menu bottom-0 dark-bg z-[100] w-5/6 flex flex-col justify-center gap-4">
       {navlinks.map((item) => (
         <div
-          className={`w-full px-6 py-2 cursor-pointer link-${item.id}`}
+          className={`w-full px-6 py-2 cursor-pointer hover:bg-primary link-${item.id}`}
           key={item.id}
           onClick={() => {
             setOpenNavigation(false);
@@ -39,10 +38,10 @@ const Navbar = ({ openNavigation, setOpenNavigation, menu, setMenu }) => {
         </div>
       ))}
       <div
-        className="w-full px-6 py-2 link-5 cursor-pointer flex items-center justify-between"
+        className="w-full px-6 py-2 link-5 cursor-pointer light flex items-center justify-between"
         onClick={() => {
           toggleTheme();
-          toggleMenu();
+          setOpenNavigation(false);
         }}
       >
         Dark mode

@@ -1,12 +1,12 @@
-import { memo, useContext, useEffect, useState } from "react";
-import { AppContext } from "../App";
+import { memo, useEffect, useState } from "react";
 import { LeftCurve, RightCurve } from "./design/Curves";
-import { Laptop } from "../assets/svg/Svgs";
 import { skills } from "./constants";
 import Rotate from "./design/Rotate";
 import Button from "./design/Button";
 import MenuSvg from "../assets/svg/MenuSvg";
 import { useNavigate } from "react-router-dom";
+import Button2 from "./design/Button2";
+import { viteSvg } from "../assets";
 
 const Skills = () => {
   const navigate = useNavigate();
@@ -22,23 +22,13 @@ const Skills = () => {
   }, [viewIndex]);
 
   return (
-    <div
-      className="grid grid-rows-9 h-full min-w-full gap-4 min-h-full relative justify-center"
-      onClick={() => {
-        if (openNavigation) {
-          setOpenNavigation(false);
-        }
-        if (menu) {
-          setMenu(false);
-        }
-      }}
-    >
+    <div className="grid grid-rows-9 h-full min-w-full gap-4 min-h-full relative justify-center">
       <p className="text-center row-span-1 p-4">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
         laudantium asperiores dolores.
       </p>
 
-      <div className="row-span-8 h-full light scale-in scale-in gap-10 rounded-md flex flex-col items-center place-content-between overflow-y-scroll scroll-design">
+      <div className="row-span-8 h-full light scale-in scale-in gap-10 rounded-md flex flex-col items-center place-content-between overflow-y-scroll scroll-design overflow-x-hidden">
         <div className="sticky right-0 left-0 bottom-full m-2 lg:ml-4 p-2 theme-color bg-clip-padding rounded-md flex place-content-center justify-center gap-2 flex-wrap items-center tagline font-semibold">
           For Details:
           {Array(9)
@@ -48,6 +38,7 @@ const Skills = () => {
                 white={viewIndex !== index ? true : false}
                 className="lg:px-10 md:px-6 sm:px-4 px-2"
                 onClick={() => setViewIndex(index)}
+                key={index}
               >
                 {skills[index].name}
               </Button>
@@ -67,7 +58,7 @@ const Skills = () => {
           } relative sm:w-[25rem] w-[25rem] mb-12 max-w-[80vw] aspect-square overflow-visible rounded-full `}
         >
           <div className="absolute inset-0 m-16 flex aspect-square rounded-full bg-cover bg-center overflow-visible items-center justify-center">
-            <Laptop fill="text-primary" />
+            <img src={viteSvg} alt="vite" className="w-1/3 aspect-square" />
           </div>
           <ul className="absolute inset-0 flex items-center justify-end">
             {skills.map((item) => (
@@ -118,12 +109,9 @@ const Skills = () => {
               </div>
             </div>
           ))}
-          <button
-            className="tagline px-4 py-2 rounded-md bg-primary text-black font-semibold mb-4"
-            onClick={() => navigate("/projects")}
-          >
+          <Button2 onClick={() => navigate("/projects")}>
             Check Projects
-          </button>
+          </Button2>
         </div>
       </div>
     </div>

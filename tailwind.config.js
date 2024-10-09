@@ -18,20 +18,20 @@ export default {
             {},
         },
         ".h2": {
-          "@apply text-[1.75rem] md:text-[2rem] lg:text-[2.5rem] xl:text-[3rem] xl:leading-tight":
+          "@apply text-[2.75rem] md:text-[2rem] lg:text-[2.5rem] xl:text-[3rem]":
             {},
         },
         ".h3": {
-          "@apply text-[2rem] leading-normal md:text-[2.5rem]": {},
+          "@apply text-[2rem] md:text-[2.5rem]": {},
         },
         ".h4": {
-          "@apply text-[2rem] leading-normal": {},
+          "@apply text-[1.7rem] md:text-[2rem]": {},
         },
         ".h5": {
-          "@apply text-2xl leading-normal": {},
+          "@apply text-2xl": {},
         },
         ".h6": {
-          "@apply font-semibold text-lg leading-8": {},
+          "@apply font-semibold text-lg": {},
         },
         ".body-1": {
           "@apply text-[0.875rem] md:text-[1rem] lg:text-[1.25rem] lg:leading-8":

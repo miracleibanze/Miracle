@@ -1,6 +1,7 @@
 import { memo, useEffect, useState } from "react";
 import { resume } from "./constants";
 import { useNavigate, useParams } from "react-router-dom";
+import Button2 from "./design/Button2";
 const Resume = () => {
   const navigate = useNavigate();
   const [viewIndex, setViewIndex] = useState(0);
@@ -16,18 +17,17 @@ const Resume = () => {
           libero!
         </p>
         {resume.map((item) => (
-          <button
-            className={`w-full px-4 py-2 rounded-md my-2 tagline font-semibold ${
-              viewIndex === item.id ? "bg-primary text-zinc-900" : "light"
-            }`}
+          <Button2
+            full
+            background={viewIndex !== item.id && "light"}
             key={item.name}
             onClick={() => setViewIndex(item.id)}
           >
             {item.name}
-          </button>
+          </Button2>
         ))}
       </div>
-      <div className="grid md:grid-cols-2 col-span-2 gap-4 md:pl-4 text-lg">
+      <div className="grid md:grid-cols-2 col-span-2 gap-4 md:pl-4 text-lg fade-down">
         <div className="md:col-span-2 md:pt-4">
           <h4 className="h4 font-code tracking-tight font-semibold">
             {resume[viewIndex].name}
@@ -36,11 +36,15 @@ const Resume = () => {
         </div>
         {viewIndex === 0 && (
           <div className="relative col-span-2 row-span-2 h5 italic clear-both light flex items-center justify-center text-center p-4 font-grotesk rounded-md">
-            "Motivated front-end web developer with a strong foundation in React.js, Tailwind CSS, and Vite. Proven experience in creating responsive, user-friendly applications with efficient routing and state management. Passionate about leveraging modern development tools to enhance user engagement and drive innovative solutions."
+            "Motivated front-end web developer with a strong foundation in
+            React.js, Tailwind CSS, and Vite. Proven experience in creating
+            responsive, user-friendly applications with efficient routing and
+            state management. Passionate about leveraging modern development
+            tools to enhance user engagement and drive innovative solutions."
           </div>
         )}
         {viewIndex === 1 && (
-          <>
+          <div className="grid col-span-2 grid-cols-2 gap-4 md:max-h-[20rem] overflow-y-scroll scroll-design">
             <div className="w-full light p-4 row-span-2">
               <p className="text-primary">2024</p>
               <h5 className="h5 font-semibold min-h-20">
@@ -75,7 +79,7 @@ const Resume = () => {
                 <li className="caption">Mukingi Secondary School</li>
               </ul>
             </div>
-          </>
+          </div>
         )}
         {viewIndex === 2 && (
           <>

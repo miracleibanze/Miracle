@@ -1,14 +1,24 @@
 import {
+  brainwaveProject,
+  brainwaveProjectSmall,
   css3Svg,
+  envelopeSvg,
   facebook,
   github,
   gitSvg,
   html5Svg,
-  instagram,
+  IMConnectProject,
+  IMConnectProjectSmall,
+  IMMoviesProject,
+  IMMoviesProjectSmall,
   jsSvg,
   linkedin,
+  mapPinSvg,
+  MukingiSSProject,
+  MukingiSSProjectSmall,
   nextJsSvg,
   npmSvg,
+  phoneSvg,
   reactSvg,
   sassSvg,
   tailwindCssSvg,
@@ -46,18 +56,17 @@ export const social = [
   {
     name: "Github",
     icon: github,
+    url: "https://github.com/miracleibanze/",
   },
   {
     name: "linkedIn",
     icon: linkedin,
+    url: "https://www.linkedin.com/in/ibanze-miracle/",
   },
   {
     name: "facebook",
     icon: facebook,
-  },
-  {
-    name: "instagram",
-    icon: instagram,
+    url: "https://facebook.com/MiracleCode/",
   },
 ];
 
@@ -169,5 +178,81 @@ export const resume = [
     name: "About Me",
     introduction:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, id.",
+  },
+];
+
+export const projects = [
+  {
+    id: 1,
+    name: "IMMovies",
+    description:
+      "orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,",
+    technologies: "React.js, Tailwind CSS",
+    status: "Ready",
+    image: {
+      img: IMMoviesProject,
+      imgPlaceHolder: IMMoviesProjectSmall,
+    },
+    url: "https://immovies.vercel.app/",
+  },
+  {
+    id: 2,
+    name: "Mukingi Secondary School",
+    description:
+      "orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,",
+    technologies: "React.js, Tailwind CSS",
+    status: "Ready",
+    image: {
+      img: MukingiSSProject,
+      imgPlaceHolder: MukingiSSProjectSmall,
+    },
+    url: "https://e-s-mukingi.vercel.app/",
+  },
+  {
+    id: 3,
+    name: "IMConnect",
+    description:
+      "orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,",
+    technologies: "React.js, Tailwind CSS",
+    status: "pending",
+    image: {
+      img: IMConnectProject,
+      imgPlaceHolder: IMConnectProjectSmall,
+    },
+    url: "https://imconnect.vercel.app/",
+  },
+  {
+    id: 4,
+    name: "BrainWave app",
+    description:
+      "orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,",
+    technologies: "React.js, Tailwind CSS",
+    status: "Ready",
+    image: {
+      img: brainwaveProject,
+      imgPlaceHolder: brainwaveProjectSmall,
+    },
+    url: "https://imbrainwave.vercel.app/",
+  },
+];
+
+export const contact = [
+  {
+    id: 0,
+    title: "Phone",
+    name: "(+250) 794881466",
+    icon: phoneSvg,
+  },
+  {
+    id: 1,
+    title: "Email",
+    name: "miracleibanze@gmail.com",
+    icon: envelopeSvg,
+  },
+  {
+    id: 2,
+    title: "Address",
+    name: "Ruhango, Rwanda",
+    icon: mapPinSvg,
   },
 ];

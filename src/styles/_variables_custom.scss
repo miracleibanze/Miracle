@@ -61,30 +61,33 @@ $bg-color: #18181b;
   }
 }
 .light {
-  background: rgba(148, 163, 184, 0.253);
+  background: #374151;
   border-radius: 10px;
 }
 
 .profile-overlay {
   background: linear-gradient(#00000000 80%, $bg-color 90%);
 }
+.animate-menu {
+  animation: swipeIn 0.5s ease-in-out forwards;
+}
 .link-0 {
-  animation: swipeIn 1s ease-in-out forwards;
+  animation: swipeIn 0.7s ease-in-out forwards;
 }
 .link-1 {
-  animation: swipeIn 1s ease-in-out forwards 0.1s;
+  animation: swipeIn 0.7s ease-in-out forwards 0.05s;
 }
 .link-2 {
-  animation: swipeIn 1s ease-in-out forwards 0.2s;
+  animation: swipeIn 0.7s ease-in-out forwards 0.1s;
 }
 .link-3 {
-  animation: swipeIn 1s ease-in-out forwards 0.3s;
+  animation: swipeIn 0.7s ease-in-out forwards 0.15s;
 }
 .link-4 {
-  animation: swipeIn 1s ease-in-out forwards 0.4s;
+  animation: swipeIn 0.7s ease-in-out forwards 0.2s;
 }
 .link-5 {
-  animation: swipeIn 1s ease-in-out forwards 0.5s;
+  animation: swipeIn 0.7s ease-in-out forwards 0.25s;
 }
 
 @keyframes swipeIn {
@@ -98,22 +101,22 @@ $bg-color: #18181b;
   }
 }
 .slide-in {
-  animation: slideIn 1s ease-in-out forwards;
+  animation: slideIn 0.7s ease-in-out forwards;
 }
 @keyframes slideIn {
   from {
-    transform: translateX(60%);
+    transform: translateX(30%);
   }
   to {
     transform: translateX(0);
   }
 }
 .fade-in {
-  animation: fadeIn 1s ease-in-out forwards;
+  animation: fadeIn 0.7s ease-in-out forwards;
 }
 @keyframes fadeIn {
   from {
-    transform: translateX(60%);
+    transform: translateX(30%);
     opacity: 0;
   }
   to {
@@ -121,12 +124,26 @@ $bg-color: #18181b;
     opacity: 1;
   }
 }
+.fade-up {
+  animation: fadeUp 0.7s ease-in-out forwards;
+}
+@keyframes fadeUp {
+  from {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .fade-down {
-  animation: fadeDown 1s ease-in-out forwards;
+  animation: fadeDown 0.7s ease-in-out forwards;
 }
 @keyframes fadeDown {
   from {
-    transform: translateY(-30%);
+    transform: translateY(-10%);
     opacity: 0;
   }
   to {
@@ -136,7 +153,7 @@ $bg-color: #18181b;
 }
 
 .opacity {
-  animation: fade 1s ease-out forwards;
+  animation: fade 0.7s ease-out forwards;
 }
 
 @keyframes fade {
@@ -148,12 +165,12 @@ $bg-color: #18181b;
   }
 }
 .scale-in {
-  animation: scaleIn 0.5s ease-in-out forwards;
+  animation: scaleIn 0.4s ease-in-out forwards;
 }
 @keyframes scaleIn {
   from {
     opacity: 0;
-    scale: 0.2;
+    scale: 0.8;
   }
   to {
     opacity: 1;

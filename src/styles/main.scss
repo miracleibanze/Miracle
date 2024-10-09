@@ -11,6 +11,9 @@
     .dark-bg {
       background: lighten($bg-color, 85%);
     }
+    .reverse {
+      background: lighten($bg-color, 75%);
+    }
     .light-bg {
       background: $bg-color;
     }
@@ -35,14 +38,31 @@
     .text-color {
       color: darken($text-color, 100%);
     }
+    .text-reverse {
+      color: $text-color;
+    }
 
     .span {
       color: rgba(0, 0, 0, 0.534);
+    }
+
+    .scroll-design::-webkit-scrollbar-thumb {
+      background-color: darken($primary-color, 30%);
+    }
+
+    .text-outline {
+      text-shadow: 0 2px 3px black, 2px 0 3px black, 0 -2px 3px black,
+        -2px 0 3px black, 2px 2px 3px black, -2px -2px 3px black;
+
+      color: lighten($bg-color, 80%);
     }
   }
 }
 .text-color {
   color: $text-color;
+}
+.text-reverse {
+  color: darken($text-color, 100%);
 }
 .span {
   color: #fafafaad;
@@ -58,77 +78,23 @@ i.span {
 }
 .scroll-design::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background-color: #9ca6b3c4;
-  display: none;
-}
-.scroll-design:hover::-webkit-scrollbar-thumb {
+  background-color: $primary-color;
   display: flex;
 }
-.rotate-0 {
-  transform: rotate(-0deg);
 
-  img {
-    transform: rotate(0deg);
-  }
-}
-.rotate-40 {
-  transform: rotate(-40deg);
+@mixin rotate($index: 360) {
+  @for $i from 0 through $index {
+    .rotate-#{$i} {
+      transform: rotate(-#{$i}deg);
 
-  img {
-    transform: rotate(40deg);
-  }
-}
-.rotate-80 {
-  transform: rotate(-80deg);
-
-  img {
-    transform: rotate(80deg);
-  }
-}
-.rotate-120 {
-  transform: rotate(-120deg);
-
-  img {
-    transform: rotate(120deg);
-  }
-}
-.rotate-160 {
-  transform: rotate(-160deg);
-
-  img {
-    transform: rotate(160deg);
+      img {
+        transform: rotate(#{$i}deg);
+      }
+    }
   }
 }
 
-.rotate-200 {
-  transform: rotate(-200deg);
-
-  img {
-    transform: rotate(200deg);
-  }
-}
-
-.rotate-240 {
-  transform: rotate(-240deg);
-
-  img {
-    transform: rotate(240deg);
-  }
-}
-.rotate-280 {
-  transform: rotate(-280deg);
-
-  img {
-    transform: rotate(280deg);
-  }
-}
-.rotate-320 {
-  transform: rotate(-320deg);
-
-  img {
-    transform: rotate(320deg);
-  }
-}
+@include rotate(360);
 
 .border-primary {
   border: 1px solid darken($text-color, 75%);
@@ -139,15 +105,34 @@ i.span {
   transform: rotateY("angle");
 }
 
+.dark-bg-semiopaque {
+  background: #18181be1;
+}
+
 .light-bg {
   background: lighten($bg-color, 85%);
 }
-
+.reverse {
+  background: $bg-color;
+}
 .text-primary {
   color: $primary-color;
 }
 .bg-primary {
   background: $primary-color;
+}
+
+.border-colorful {
+  border: 3px dashed;
+  border-bottom-color: #ffc876;
+  border-left-color: #79fff7;
+  border-top-color: #9f53ff;
+  border-right-color: #ff98e2;
+  transform: rotate(45deg);
+
+  * {
+    transform: rotate(-45deg);
+  }
 }
 
 body {
@@ -202,4 +187,11 @@ body {
 }
 .bg-count-8 {
   background: conic-gradient(#d946ef 70%, #e4e4e7 70%);
+}
+
+.text-outline {
+  text-shadow: 0 2px 3px white, 2px 0 3px white, 0 -2px 3px white,
+    -2px 0 3px white, 2px 2px 3px white, 2px 2px 3px white;
+  font-weight: 900;
+  color: $bg-color;
 }
