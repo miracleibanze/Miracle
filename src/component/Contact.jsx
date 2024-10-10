@@ -27,8 +27,9 @@ const Contact = () => {
           Let's Work Together
         </h3>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium
-          illo ullam vitae ipsa et inventore.
+          If you're looking for a dedicated developer to bring your ideas to
+          life, feel free to reach out! I’m eager to collaborate on exciting
+          projects and create impactful solutions together.
         </p>
         <Input type="text" placeholder="Full names" />
         <Input type="email" placeholder="Email address" />
