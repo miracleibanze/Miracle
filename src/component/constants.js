@@ -210,19 +210,6 @@ export const projects = [
   },
   {
     id: 3,
-    name: "IMConnect",
-    description:
-      "orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,",
-    technologies: "React.js, Tailwind CSS",
-    status: "pending",
-    image: {
-      img: IMConnectProject,
-      imgPlaceHolder: IMConnectProjectSmall,
-    },
-    url: "https://imconnect.vercel.app/",
-  },
-  {
-    id: 4,
     name: "BrainWave app",
     description:
       "orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,",
@@ -233,6 +220,19 @@ export const projects = [
       imgPlaceHolder: brainwaveProjectSmall,
     },
     url: "https://imbrainwave.vercel.app/",
+  },
+  {
+    id: 4,
+    name: "IMConnect",
+    description:
+      "orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,",
+    technologies: "React.js, Tailwind CSS",
+    status: "pending",
+    image: {
+      img: IMConnectProject,
+      imgPlaceHolder: IMConnectProjectSmall,
+    },
+    url: "https://imconnect.vercel.app/",
   },
 ];
 

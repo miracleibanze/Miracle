@@ -2,13 +2,15 @@ import { memo, useState } from "react";
 import { projects } from "./constants";
 import { AngleLeftSvg, AngleRightSvg, Visit } from "../assets/svg/Arrow";
 import { doneSvg, undoneSvg } from "../assets";
-const Projects = () => {
+import { useNavigate } from "react-router-dom";
+const Projects = ({ setDirectDestination }) => {
+  const navigate = useNavigate();
   const [viewindex, setViewIndex] = useState(0);
 
   const redirect = (source, destination) => {
     console.log(destination);
     setDirectDestination(destination);
-    navigate(`/${source}/redirecting/external/source`);
+    navigate(`/projects/redirecting/external/source`);
   };
 
   const nextProject = () => {

@@ -105,15 +105,13 @@ const Navbar = ({ openNavigation, setOpenNavigation, menu, setMenu }) => {
         <div
           className={`absolute z-10 max-sm:hidden top-full right-0 px-4 py-2 dark-bg w-[20rem] ${
             !menu && "hidden"
-          }`}
+          } z-[100]`}
+          onClick={() => {
+            toggleTheme();
+            toggleMenu();
+          }}
         >
-          <span
-            onClick={() => {
-              toggleTheme();
-              toggleMenu();
-            }}
-            className="flex items-center justify-between w-full hover:dark-bg px-4 py-2 cursor-pointer"
-          >
+          <span className="flex items-center justify-between w-full hover:dark-bg px-4 py-2 cursor-pointer">
             <p>Dark mode</p>
             <Toggle rotate={theme ? "rotate-180" : "rotate-0"} />
           </span>

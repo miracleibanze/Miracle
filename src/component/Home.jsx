@@ -2,12 +2,13 @@ import { memo } from "react";
 import { cvDocument, gradient, profile } from "../assets";
 import { social } from "./constants";
 import Button from "./design/Button";
+import { useNavigate } from "react-router-dom";
 
-const Home = () => {
-  const redirect = (source, destination) => {
-    console.log(destination);
+const Home = ({ setDirectDestination }) => {
+  const navigate = useNavigate();
+  const redirect = (destination) => {
     setDirectDestination(destination);
-    navigate(`/${source}/redirecting/external/source`);
+    navigate(`/home/redirecting/external/source`);
   };
 
   return (
@@ -33,7 +34,7 @@ const Home = () => {
               <div
                 className="h-10 aspect-square rounded-full flex items-center justify-center p-1.5 border-colorful"
                 key={item.name}
-                onClick={() => redirect("home", item.url)}
+                onClick={() => redirect(item.url)}
               >
                 <img src={item.icon} className="h-full w-full" />
               </div>
@@ -45,8 +46,8 @@ const Home = () => {
         <img
           src={profile}
           className="h-[30rem] w-[18rem] z-10 object-cover object-top fade-in"
-          width={500}
-          height={845}
+          width={568}
+          height={876}
         />
         <div className="profile-overlay absolute top-0 -right-1/2 left-0 -bottom-1 z-[12] md:slide-in" />
         <img

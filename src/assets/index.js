@@ -2,8 +2,6 @@ import spinnerSvg from "./svg/spinner.svg";
 import blackSpinnerSvg from "./svg/blackSpinner.svg";
 
 import profile from "./profile.png";
-import profile2 from "./profile2.png";
-import profile3 from "./profile3.png";
 import profileSmall from "./profile-small.png";
 
 import github from "./svg/github.svg";
@@ -52,8 +50,6 @@ export {
   facebook,
   linkedin,
   profile,
-  profile2,
-  profile3,
   profileSmall,
   gradient,
   globe,

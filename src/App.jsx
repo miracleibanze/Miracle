@@ -11,8 +11,6 @@ const Resume = lazy(() => import("./component/Resume"));
 const Projects = lazy(() => import("./component/Projects"));
 const Contact = lazy(() => import("./component/Contact"));
 
-export const AppContext = createContext();
-
 const App = () => {
   const navigate = useNavigate();
   const [openNavigation, setOpenNavigation] = useState(false);
@@ -46,28 +44,25 @@ const App = () => {
         }}
       >
         <Suspense fallback={<Preloader />}>
-          <AppContext.Provider
-            value={{
-              openNavigation,
-              setOpenNavigation,
-              menu,
-              setMenu,
-              redirect,
-            }}
-          >
-            <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="/skills" element={<Skills />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="/projects" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route
-                path="/:source/redirecting/external/source"
-                element={<Redirecting directDestination={directDestination} />}
-              />
-              <Route path="*" element={<PageNotFound />} />
-            </Routes>
-          </AppContext.Provider>
+          <Routes>
+            <Route
+              exact
+              path="/"
+              element={<Home setDirectDestination={setDirectDestination} />}
+            />
+            <Route path="/skills" element={<Skills />} />
+            <Route path="/resume" element={<Resume />} />
+            <Route
+              path="/projects"
+              element={<Projects setDirectDestination={setDirectDestination} />}
+            />
+            <Route path="/contact" element={<Contact />} />
+            <Route
+              path="/:source/redirecting/external/source"
+              element={<Redirecting directDestination={directDestination} />}
+            />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
         </Suspense>
       </div>
     </main>
