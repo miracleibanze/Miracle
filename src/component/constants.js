@@ -136,15 +136,6 @@ export const skills = [
   },
   {
     id: 7,
-    name: "NPM",
-    title: "NPM",
-    icon: npmSvg,
-    level: "Intermediate",
-    count: 65,
-    status: "Ready to work",
-  },
-  {
-    id: 8,
     name: "Git",
     title: "Git",
     icon: gitSvg,
@@ -158,26 +149,18 @@ export const resume = [
   {
     id: 0,
     name: "Summary",
-    introduction:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, id.",
   },
   {
     id: 1,
     name: "Education",
-    introduction:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, id.",
   },
   {
     id: 2,
     name: "Skills",
-    introduction:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, id.",
   },
   {
     id: 3,
     name: "About Me",
-    introduction:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, id.",
   },
 ];
 
@@ -186,8 +169,8 @@ export const projects = [
     id: 1,
     name: "IMMovies",
     description:
-      "orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,",
-    technologies: "React.js, Tailwind CSS",
+      "ImMovies is a sleek front-end application designed to provide users with an intuitive movie browsing experience. Built with React and Tailwind CSS, it showcases a modern interface where users can effortlessly search for and explore their favorite films, complete with detailed information and vibrant visuals.",
+    technologies: "React.js, Javascript, Tailwind CSS, Vite",
     status: "Ready",
     image: {
       img: IMMoviesProject,
@@ -199,8 +182,8 @@ export const projects = [
     id: 2,
     name: "Mukingi Secondary School",
     description:
-      "orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,",
-    technologies: "React.js, Tailwind CSS",
+      "E-S Mukingi is a front-end platform for Mukingi Secondary School, offering essential information such as news, events, educational facilities, and resources. Built with React and Tailwind CSS, the site provides a user-friendly experience for students, parents, and the community, complete with contact details for inquiries.",
+    technologies: "React.js, Javascript, Tailwind CSS, Vite",
     status: "Ready",
     image: {
       img: MukingiSSProject,
@@ -212,8 +195,8 @@ export const projects = [
     id: 3,
     name: "BrainWave app",
     description:
-      "orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,",
-    technologies: "React.js, Tailwind CSS",
+      "BrainWave is a front-end application that utilizes AI to generate images and videos aimed at enhancing focus and productivity. Built with React.js and Tailwind CSS, it features a user-friendly interface for exploring captivating visuals. Hosted on Vercel, this project highlights my skills in modern web development.",
+    technologies: "React.js, Javascript, Tailwind CSS, Vite",
     status: "Ready",
     image: {
       img: brainwaveProject,
@@ -225,8 +208,8 @@ export const projects = [
     id: 4,
     name: "IMConnect",
     description:
-      "orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,orem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,",
-    technologies: "React.js, Tailwind CSS",
+      "ImConnect is a user-friendly front-end application designed to facilitate seamless communication and collaboration. Built with React.js and styled with Tailwind CSS, it offers an intuitive interface for connecting users, sharing messages, and managing interactions. Hosted on Vercel, ImConnect showcases my skills in modern web development and real-time application features.",
+    technologies: "React.js, Javascript, Tailwind CSS, Vite",
     status: "pending",
     image: {
       img: IMConnectProject,

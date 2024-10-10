@@ -13,8 +13,8 @@ const Resume = () => {
           Why&nbsp;hire&nbsp;me
         </h3>
         <p className="mb-8 span">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo,
-          libero!
+          I leverage creativity and technical skills to deliver tailored web
+          solutions, making me an ideal candidate for your project.
         </p>
         {resume.map((item) => (
           <Button2
@@ -32,7 +32,10 @@ const Resume = () => {
           <h4 className="h4 font-code tracking-tight font-semibold">
             {resume[viewIndex].name}
           </h4>
-          <p className="mb-4 span">{resume[viewIndex].introduction}</p>
+          <p className="mb-4 span leading-none mt-4">
+            A dedicated and detail-oriented professional with a commitment to
+            continuous learning and improvement in web development.
+          </p>
         </div>
         {viewIndex === 0 && (
           <div className="relative col-span-2 row-span-2 h5 italic clear-both light flex items-center justify-center text-center p-4 font-grotesk rounded-md">

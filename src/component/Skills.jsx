@@ -23,15 +23,15 @@ const Skills = () => {
 
   return (
     <div className="grid grid-rows-9 h-full min-w-full gap-4 min-h-full relative justify-center">
-      <p className="text-center row-span-1 p-4">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-        laudantium asperiores dolores.
+      <p className="text-center row-span-1 p-4 max-w-lg mx-auto">
+        I possess a strong foundation in web development, allowing me to create
+        efficient and responsive solutions tailored to meet client needs.
       </p>
 
-      <div className="row-span-8 h-full light scale-in scale-in gap-10 rounded-md flex flex-col items-center place-content-between overflow-y-scroll scroll-design overflow-x-hidden">
+      <div className="row-span-8 h-full light scale-in scale-in gap-10 rounded-md flex flex-col items-center place-content-between overflow-y-scroll scroll-design overflow-x-hidden translate-y-8">
         <div className="sticky right-0 left-0 bottom-full m-2 lg:ml-4 p-2 theme-color bg-clip-padding rounded-md flex place-content-center justify-center gap-2 flex-wrap items-center tagline font-semibold">
           For Details:
-          {Array(9)
+          {Array(8)
             .fill("")
             .map((item, index) => (
               <Button
@@ -55,16 +55,16 @@ const Skills = () => {
         <div
           className={`${
             !detailView && "hidden"
-          } relative sm:w-[25rem] w-[25rem] mb-12 max-w-[80vw] aspect-square overflow-visible rounded-full `}
+          } relative sm:w-[20rem] w-[18rem] mb-12 max-w-[80vw] aspect-square overflow-visible rounded-full `}
         >
           <div className="absolute inset-0 m-16 flex aspect-square rounded-full bg-cover bg-center overflow-visible items-center justify-center">
             <img src={viteSvg} alt="vite" className="w-1/3 aspect-square" />
           </div>
           <ul className="absolute inset-0 flex items-center justify-end">
             {skills.map((item) => (
-              <Rotate index={Math.round(item.id * 40)} key={item.id}>
+              <Rotate index={Math.round(item.id * 45)} key={item.id}>
                 <div
-                  className={`absolute p-1 bg-conic-gradient opacity h-[140%] translate-x-6 top-1/2 -translate-y-1/2 aspect-square rounded-full`}
+                  className={`absolute p-1 bg-conic-gradient opacity h-[130%] translate-x-6 top-1/2 -translate-y-1/2 aspect-square rounded-full`}
                 >
                   <div className="h-full aspect-square rounded-full p-3 bg-[#e4e4e7] flex items-center place-content-center">
                     <img
