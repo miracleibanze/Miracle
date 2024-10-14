@@ -36,7 +36,7 @@ const Contact = () => {
         <Input type="number" placeholder="Phone number" />
         <textarea
           placeholder="Type your message here."
-          className="reverse w-full h-[6rem] rounded-md px-4 py-2 outline-1 outline-indigo-300"
+          className="dark-bg w-full h-[6rem] rounded-md px-4 py-2 border border-indigo-300 outline-none"
         ></textarea>
         <Button2 className=" text-reverse">Send message</Button2>
       </div>

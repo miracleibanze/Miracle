@@ -8,7 +8,7 @@ const Resume = () => {
 
   return (
     <div className="w-full grid md:grid-cols-3 gap-3 mt-[5vh] max-md:overflow-y-scroll scroll-design max-h-full">
-      <div className="relative w-full px-2 max-md:text-center md:pr-4 md:col-span-1 col-span-2">
+      <div className="relative w-full px-2 max-md:text-center md:pr-4 md:col-span-1 col-span-2 max-sm:px-4">
         <h3 className="h3 font-code tracking-tighter font-semibold">
           Why&nbsp;hire&nbsp;me
         </h3>
@@ -27,12 +27,14 @@ const Resume = () => {
           </Button2>
         ))}
       </div>
-      <div className="grid md:grid-cols-2 col-span-2 gap-4 md:pl-4 text-lg fade-down">
+      <div className="grid md:grid-cols-2 col-span-2 gap-4 md:pl-4 text-lg fade-down max-sm:px-4">
         <div className="md:col-span-2 md:pt-4">
           <h4 className="h4 font-code tracking-tight font-semibold">
-            {resume[viewIndex].name}
+            {resume[viewIndex].name === "Summary"
+              ? "Professional " + resume[viewIndex].name
+              : resume[viewIndex].name}
           </h4>
-          <p className="mb-4 span leading-none mt-4">
+          <p className="mb-4 span leading-none mt-4 max-md:hidden">
             A dedicated and detail-oriented professional with a commitment to
             continuous learning and improvement in web development.
           </p>
@@ -115,8 +117,8 @@ const Resume = () => {
           </>
         )}
         {viewIndex === 3 && (
-          <div className="md:col-span-2 flex items-center">
-            <div className="w-1/3">
+          <div className="md:col-span-2 flex sm:flex-row items-center flex-col">
+            <div className="sm:w-1/3 w-full">
               <p>
                 <i className="span">Names:</i>
                 <br />
@@ -133,7 +135,7 @@ const Resume = () => {
                 &nbsp;&nbsp;Ruhango,&nbsp;Rwanda
               </p>
             </div>
-            <div className="w-2/3">
+            <div className="sm:w-2/3 w-full">
               <p>
                 <i className="span">Telephone:</i>
                 <br />

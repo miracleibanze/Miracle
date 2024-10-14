@@ -69,110 +69,171 @@ $bg-color: #18181b;
   background: linear-gradient(#00000000 80%, $bg-color 90%);
 }
 .animate-menu {
-  animation: swipeIn 0.5s ease-in-out forwards;
-}
-.link-0 {
   animation: swipeIn 0.7s ease-in-out forwards;
 }
+.link-0 {
+  animation: swipeIn 0.9s ease-in-out forwards;
+}
 .link-1 {
-  animation: swipeIn 0.7s ease-in-out forwards 0.05s;
+  animation: swipeIn 0.9s ease-in-out forwards 0.05s;
 }
 .link-2 {
-  animation: swipeIn 0.7s ease-in-out forwards 0.1s;
+  animation: swipeIn 0.9s ease-in-out forwards 0.1s;
 }
 .link-3 {
-  animation: swipeIn 0.7s ease-in-out forwards 0.15s;
+  animation: swipeIn 0.9s ease-in-out forwards 0.15s;
 }
 .link-4 {
-  animation: swipeIn 0.7s ease-in-out forwards 0.2s;
+  animation: swipeIn 0.9s ease-in-out forwards 0.2s;
 }
 .link-5 {
-  animation: swipeIn 0.7s ease-in-out forwards 0.25s;
+  animation: swipeIn 0.9s ease-in-out forwards 0.25s;
 }
 
 @keyframes swipeIn {
-  from {
+  0% {
     transform: translateX(120%);
     opacity: 0;
   }
-  to {
+  20% {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  100% {
     transform: translateX(0);
     opacity: 1;
   }
 }
 .slide-in {
-  animation: slideIn 0.7s ease-in-out forwards;
+  animation: slideIn 0.9s ease-in-out 0.7s forwards;
 }
 @keyframes slideIn {
-  from {
+  0% {
     transform: translateX(30%);
   }
-  to {
+  20% {
+    transform: translateX(30%);
+  }
+  100% {
     transform: translateX(0);
   }
 }
 .fade-in {
-  animation: fadeIn 0.7s ease-in-out forwards;
+  animation: fadeIn 0.9s ease-in-out 0.7s forwards;
 }
 @keyframes fadeIn {
-  from {
+  0% {
     transform: translateX(30%);
     opacity: 0;
   }
-  to {
+  20% {
+    transform: translateX(30%);
+    opacity: 0;
+  }
+  100% {
     transform: translateX(0);
     opacity: 1;
   }
 }
 .fade-up {
-  animation: fadeUp 0.7s ease-in-out forwards;
+  animation: fadeUp 0.9s ease-in-out 0.7s forwards;
 }
 @keyframes fadeUp {
-  from {
+  0% {
     transform: translateY(10%);
     opacity: 0;
   }
-  to {
+  20% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
+.stair-0 {
+  box-shadow: 3px 3px 3px #f4f4f4;
+  animation: stairs 1s ease-in-out 0s forwards;
+}
+.stair-1 {
+  box-shadow: 3px 3px 3px #f4f4f4;
+  animation: stairs 1s ease-in-out 0.1s forwards;
+}
+.stair-2 {
+  box-shadow: 3px 3px 3px #f4f4f4;
+  animation: stairs 1s ease-in-out 0.2s forwards;
+}
+.stair-3 {
+  box-shadow: 3px 3px 3px #f4f4f4;
+  animation: stairs 1s ease-in-out 0.3s forwards;
+}
+.stair-4 {
+  box-shadow: 3px 3px 3px #f4f4f4;
+  animation: stairs 1s ease-in-out 0.4s forwards;
+}
+
+@keyframes stairs {
+  0% {
+    height: 0%;
+  }
+  40% {
+    height: 100%;
+  }
+  60% {
+    height: 100%;
+  }
+  100% {
+    height: 0%;
+  }
+}
 
 .fade-down {
-  animation: fadeDown 0.7s ease-in-out forwards;
+  animation: fadeDown 0.9s ease-in-out 0.7s forwards;
 }
 @keyframes fadeDown {
-  from {
+  0% {
     transform: translateY(-10%);
     opacity: 0;
   }
-  to {
+  20% {
+    transform: translateY(-10%);
+    opacity: 0;
+  }
+  100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
 .opacity {
-  animation: fade 0.7s ease-out forwards;
+  animation: fade 0.9s ease-out forwards;
 }
 
 @keyframes fade {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  0% {
+    opacity: 0;
+  }
+  100% {
     opacity: 1;
   }
 }
 .scale-in {
-  animation: scaleIn 0.4s ease-in-out forwards;
+  animation: scaleIn 0.6s ease-in-out 0.7s forwards;
 }
 @keyframes scaleIn {
-  from {
+  0% {
     opacity: 0;
     scale: 0.8;
   }
-  to {
+  20% {
+    opacity: 0;
+    scale: 0.8;
+  }
+  100% {
     opacity: 1;
     scale: 1;
   }

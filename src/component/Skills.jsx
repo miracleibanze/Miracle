@@ -23,13 +23,13 @@ const Skills = () => {
 
   return (
     <div className="grid grid-rows-9 h-full min-w-full gap-4 min-h-full relative justify-center">
-      <p className="text-center row-span-1 p-4 max-w-lg mx-auto">
+      <p className="text-center row-span-1 p-4 max-w-lg mx-auto max-md: px-8">
         I possess a strong foundation in web development, allowing me to create
         efficient and responsive solutions tailored to meet client needs.
       </p>
 
       <div className="row-span-8 h-full light scale-in scale-in gap-10 rounded-md flex flex-col items-center place-content-between overflow-y-scroll scroll-design overflow-x-hidden translate-y-8">
-        <div className="sticky right-0 left-0 bottom-full m-2 lg:ml-4 p-2 theme-color bg-clip-padding rounded-md flex place-content-center justify-center gap-2 flex-wrap items-center tagline font-semibold">
+        <div className="sticky right-0 left-0 bottom-full m-2 lg:ml-4 p-2 dark-bg bg-clip-padding rounded-md flex place-content-center justify-center gap-2 flex-wrap items-center tagline font-semibold">
           For Details:
           {Array(8)
             .fill("")
@@ -95,12 +95,12 @@ const Skills = () => {
                   viewIndex !== item.id && "hidden"
                 } opacity h-24 aspect-square rounded-full`}
               >
-                <div className="h-full aspect-square rounded-full p-3 theme-color flex items-center place-content-center font-bold font-code text-2xl">
+                <div className="h-full aspect-square rounded-full p-3 dark-bg flex items-center place-content-center font-bold font-code text-2xl">
                   {item.count}%
                 </div>
               </div>
               <div
-                className={`px-4 py-2 rounded-md theme-color ${
+                className={`px-4 py-2 rounded-md dark-bg ${
                   viewIndex !== item.id && "hidden"
                 } sm:w-[20rem] w-full`}
               >

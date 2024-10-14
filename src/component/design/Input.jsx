@@ -4,7 +4,7 @@ const Input = ({ type, placeholder, onChange }) => {
       type={type}
       placeholder={placeholder}
       onChange={onChange}
-      className="w-full px-4 py-2 rounded-md reverse outline-1 outline-indigo-300"
+      className="w-full px-4 py-2 rounded-md dark-bg border border-indigo-300 outline-none"
     />
   );
 };

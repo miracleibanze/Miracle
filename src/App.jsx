@@ -1,6 +1,14 @@
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./component/Navbar";
-import { createContext, lazy, Suspense, useCallback, useState } from "react";
+import {
+  createContext,
+  lazy,
+  Suspense,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useState,
+} from "react";
 import Preloader from "./component/design/Preloader";
 import PageNotFound from "./component/PageNotFound";
 import Redirecting from "./component/Redirecting";
@@ -12,10 +20,13 @@ const Projects = lazy(() => import("./component/Projects"));
 const Contact = lazy(() => import("./component/Contact"));
 
 const App = () => {
+  const location = useLocation().pathname;
   const navigate = useNavigate();
   const [openNavigation, setOpenNavigation] = useState(false);
   const [menu, setMenu] = useState(null);
 
+  const [stairsLoader, setStairsLoader] = useState(false);
+  const [stairsBg, setStairsBg] = useState(false);
   const [directDestination, setDirectDestination] = useState("");
 
   const redirect = (source, destination) => {
@@ -23,6 +34,17 @@ const App = () => {
     setDirectDestination(destination);
     navigate(`/${source}/redirecting/external/source`);
   };
+
+  useLayoutEffect(() => {
+    setStairsLoader(true);
+    setStairsBg(true);
+    setTimeout(() => {
+      setStairsBg(false);
+    }, 800);
+    setTimeout(() => {
+      setStairsLoader(false);
+    }, 1400);
+  }, [location]);
 
   return (
     <main className="lg:max-w-screen-lg max-w-full max-md:min-w-full h-full relative w-full min-h-[90vh]">
@@ -65,6 +87,21 @@ const App = () => {
           </Routes>
         </Suspense>
       </div>
+      {stairsLoader && (
+        <div
+          className={`fixed bottom-0 right-0 left-0 inset-0  flex flex-row-reverse items-end justify-between place-content-end pointer-events-none z-[9999] stairs ${
+            stairsBg && "dark-bg"
+          }`}
+        >
+          {Array(5)
+            .fill("")
+            .map((item, index) => (
+              <div
+                className={`stair-${index} light-bg overflow-hiddden w-[20vw]`}
+              />
+            ))}
+        </div>
+      )}
     </main>
   );
 };

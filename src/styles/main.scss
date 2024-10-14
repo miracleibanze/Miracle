@@ -5,14 +5,8 @@
     background: lighten($bg-color, 80%);
     color: darken($text-color, 100%);
 
-    .theme-color {
-      background: lighten($bg-color, 80%);
-    }
     .dark-bg {
       background: lighten($bg-color, 85%);
-    }
-    .reverse {
-      background: lighten($bg-color, 75%);
     }
     .light-bg {
       background: $bg-color;
@@ -38,9 +32,6 @@
     .text-color {
       color: darken($text-color, 100%);
     }
-    .text-reverse {
-      color: $text-color;
-    }
 
     .span {
       color: rgba(0, 0, 0, 0.534);
@@ -56,13 +47,30 @@
 
       color: lighten($bg-color, 80%);
     }
+
+    .stair-0 {
+      box-shadow: 3px 3px 3px black;
+    }
+
+    .stair-1 {
+      box-shadow: 3px 3px 3px black;
+    }
+
+    .stair-2 {
+      box-shadow: 3px 3px 3px black;
+    }
+
+    .stair-3 {
+      box-shadow: 3px 3px 3px black;
+    }
+
+    .stair-4 {
+      box-shadow: 3px 3px 3px black;
+    }
   }
 }
 .text-color {
   color: $text-color;
-}
-.text-reverse {
-  color: darken($text-color, 100%);
 }
 .span {
   color: #fafafaad;
@@ -101,8 +109,6 @@ i.span {
 }
 .dark-bg {
   background: $bg-color;
-  box-shadow: -3px 3px 1rem -3px #f4f4f4;
-  transform: rotateY("angle");
 }
 
 .dark-bg-semiopaque {
@@ -111,9 +117,6 @@ i.span {
 
 .light-bg {
   background: lighten($bg-color, 85%);
-}
-.reverse {
-  background: $bg-color;
 }
 .text-primary {
   color: $primary-color;
@@ -147,9 +150,6 @@ body {
   }
 }
 
-.theme-color {
-  background: $bg-color;
-}
 :root {
   --font-sora: "Sora", sans-serif;
   --font-code: "Source Code Pro", monospace;
