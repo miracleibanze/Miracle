@@ -7,6 +7,7 @@ import MenuSvg from "../assets/svg/MenuSvg";
 import { useNavigate } from "react-router-dom";
 import Button2 from "./design/Button2";
 import { viteSvg } from "../assets";
+import PageSwitcherStairs from "./design/PageSwitcherStairs";
 
 const Skills = () => {
   const navigate = useNavigate();
@@ -114,6 +115,7 @@ const Skills = () => {
           </Button2>
         </div>
       </div>
+      <PageSwitcherStairs />
     </div>
   );
 };

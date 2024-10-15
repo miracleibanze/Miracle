@@ -3,6 +3,7 @@ import { cvDocument, gradient, profile } from "../assets";
 import { social } from "./constants";
 import Button from "./design/Button";
 import { useNavigate } from "react-router-dom";
+import PageSwitcherStairs from "./design/PageSwitcherStairs";
 
 const Home = ({ setDirectDestination }) => {
   const navigate = useNavigate();
@@ -15,11 +16,11 @@ const Home = ({ setDirectDestination }) => {
     <div className="w-full flex md:flex-row flex-col items-center justify-between md:h-[80vh]">
       <div className="md:w-[60%] w-full aspect-auto light fade-down py-16 px-8 rounded-3xl">
         <p className="tagline">Front-End Developer</p>
-        <h1 className="sm:h1 h2 font-semibold font-code tracking-tight leading-none mb-3">
+        <div className="sm:h2 h3 font-semibold font-code tracking-tight leading-none mb-3">
           Hello I'm
           <br />
-          <span className="text-primary">IBANZE Miracle</span>
-        </h1>
+          <span className="sm:h1 h2 text-primary">IBANZE Miracle</span>
+        </div>
         <p className="caption mb-4">
           I excel at crafting at digital experiences and
           <br />I am proficient in various programming languages and
@@ -55,6 +56,7 @@ const Home = ({ setDirectDestination }) => {
           className="absolute inset-0 object-contain opacity object-top opacity"
         />
       </div>
+      <PageSwitcherStairs />
     </div>
   );
 };

@@ -1,0 +1,100 @@
+.navLink-Underline::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  margin: 0 auto;
+  width: 60%;
+  right: 50%;
+  transform: translateX(50%);
+  border-radius: 10px;
+  animation: snap 3s ease-in-out infinite;
+  height: 0.2rem;
+  background: $text-color;
+}
+
+.light {
+  background: #374151;
+  border-radius: 10px;
+}
+.profile-overlay {
+  background: linear-gradient(#00000000 80%, $bg-color 90%);
+}
+
+.text-color {
+  color: $text-color;
+}
+.text-reverse {
+  color: darken($text-color, 100%);
+}
+.span {
+  color: #fafafaad;
+}
+i.span {
+  font-size: 80%;
+}
+
+.border-primary {
+  border: 1px solid darken($text-color, 75%);
+}
+.dark-bg {
+  background: $bg-color;
+}
+
+.dark-bg-semiopaque {
+  background: #18181be1;
+}
+
+.light-bg {
+  background: lighten($bg-color, 85%);
+}
+.text-primary {
+  color: $primary-color;
+}
+.bg-primary {
+  background: $primary-color;
+}
+
+.border-colorful {
+  border: 2px dashed;
+  border-bottom-color: #ffc876;
+  border-left-color: #79fff7;
+  border-top-color: #9f53ff;
+  border-right-color: #ff98e2;
+  transform: rotate(45deg);
+
+  * {
+    transform: rotate(-45deg);
+  }
+}
+.bg-count-0 {
+  background: conic-gradient(#d946ef 92%, #e4e4e7 92%);
+}
+.bg-count-1 {
+  background: conic-gradient(#d946ef 89%, #e4e4e7 89%);
+}
+.bg-count-2 {
+  background: conic-gradient(#d946ef 68%, #e4e4e7 68%);
+}
+.bg-count-3 {
+  background: conic-gradient(#d946ef 90%, #e4e4e7 90%);
+}
+.bg-count-4 {
+  background: conic-gradient(#d946ef 85%, #e4e4e7 85%);
+}
+.bg-count-5 {
+  background: conic-gradient(#d946ef 78%, #e4e4e7 78%);
+}
+.bg-count-6 {
+  background: conic-gradient(#d946ef 30%, #e4e4e7 30%);
+}
+
+.bg-count-7 {
+  background: conic-gradient(#d946ef 70%, #e4e4e7 70%);
+}
+
+.text-outline {
+  text-shadow: 0 2px 3px white, 2px 0 3px white, 0 -2px 3px white,
+    -2px 0 3px white, 2px 2px 3px white, 2px 2px 3px white;
+  font-weight: 900;
+  color: $bg-color;
+}

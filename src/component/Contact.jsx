@@ -2,6 +2,7 @@ import { memo } from "react";
 import Input from "./design/Input";
 import Button2 from "./design/Button2";
 import { contact } from "./constants";
+import PageSwitcherStairs from "./design/PageSwitcherStairs";
 
 const Contact = () => {
   return (
@@ -40,6 +41,7 @@ const Contact = () => {
         ></textarea>
         <Button2 className=" text-reverse">Send message</Button2>
       </div>
+      <PageSwitcherStairs />
     </div>
   );
 };

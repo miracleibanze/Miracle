@@ -87,21 +87,6 @@ const App = () => {
           </Routes>
         </Suspense>
       </div>
-      {stairsLoader && (
-        <div
-          className={`fixed bottom-0 right-0 left-0 inset-0  flex flex-row-reverse items-end justify-between place-content-end pointer-events-none z-[9999] stairs ${
-            stairsBg && "dark-bg"
-          }`}
-        >
-          {Array(5)
-            .fill("")
-            .map((item, index) => (
-              <div
-                className={`stair-${index} light-bg overflow-hiddden w-[20vw]`}
-              />
-            ))}
-        </div>
-      )}
     </main>
   );
 };

@@ -1,0 +1,97 @@
+@mixin customTheme($light-customTheme: true) {
+  @if $light-customTheme {
+    background: lighten($bg-color, 80%);
+    color: darken($text-color, 100%);
+
+    .dark-bg {
+      background: lighten($bg-color, 85%);
+    }
+    .light-bg {
+      background: $bg-color;
+    }
+    .text-primary {
+      color: darken($primary-color, 30%);
+    }
+    .bg-primary {
+      background: darken($primary-color, 30%);
+    }
+    .light {
+      background: #f4f4f4;
+    }
+    .profile-overlay {
+      background: linear-gradient(#00000000 80%, #e4e4e7 90%);
+    }
+    .navLink-Underline::after {
+      background: darken($primary-color, 30%);
+    }
+    .border-primary {
+      border: 1px solid darken($text-color, 20%);
+    }
+    .text-color {
+      color: darken($text-color, 100%);
+    }
+    .text-reverse {
+      color: $text-color;
+    }
+
+    .span {
+      color: rgba(0, 0, 0, 0.534);
+    }
+
+    .scroll-design::-webkit-scrollbar-thumb {
+      background-color: darken($primary-color, 30%);
+    }
+
+    .text-outline {
+      text-shadow: 0 2px 3px black, 2px 0 3px black, 0 -2px 3px black,
+        -2px 0 3px black, 2px 2px 3px black, -2px -2px 3px black;
+
+      color: lighten($bg-color, 80%);
+    }
+
+    .stair-0 {
+      box-shadow: 3px 3px 3px #18181b;
+    }
+
+    .stair-1 {
+      box-shadow: 3px 3px 3px #18181b;
+    }
+
+    .stair-2 {
+      box-shadow: 3px 3px 3px #18181b;
+    }
+
+    .stair-3 {
+      box-shadow: 3px 3px 3px #18181b;
+    }
+
+    .stair-4 {
+      box-shadow: 3px 3px 3px #18181b;
+    }
+
+    .stairs {
+      animation: LightStairsContainer 1.4s ease-in-out forwards;
+    }
+    @keyframes LightStairsContainer {
+      0% {
+        display: flex;
+        background-color: #f4f4f4;
+      }
+      50% {
+        background-color: #f4f4f4;
+      }
+      51% {
+        background-color: none;
+      }
+      99% {
+        display: flex;
+      }
+      100% {
+        display: none;
+      }
+    }
+  }
+}
+.theme {
+  @include customTheme($light-customTheme: true);
+}

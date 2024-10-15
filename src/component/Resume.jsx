@@ -2,6 +2,7 @@ import { memo, useEffect, useState } from "react";
 import { resume } from "./constants";
 import { useNavigate, useParams } from "react-router-dom";
 import Button2 from "./design/Button2";
+import PageSwitcherStairs from "./design/PageSwitcherStairs";
 const Resume = () => {
   const navigate = useNavigate();
   const [viewIndex, setViewIndex] = useState(0);
@@ -160,6 +161,7 @@ const Resume = () => {
           </div>
         )}
       </div>
+      <PageSwitcherStairs />
     </div>
   );
 };

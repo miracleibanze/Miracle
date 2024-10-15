@@ -3,6 +3,7 @@ import { projects } from "./constants";
 import { AngleLeftSvg, AngleRightSvg, Visit } from "../assets/svg/Arrow";
 import { doneSvg, undoneSvg } from "../assets";
 import { useNavigate } from "react-router-dom";
+import PageSwitcherStairs from "./design/PageSwitcherStairs";
 const Projects = ({ setDirectDestination }) => {
   const navigate = useNavigate();
   const [viewindex, setViewIndex] = useState(0);
@@ -75,6 +76,7 @@ const Projects = ({ setDirectDestination }) => {
           <Visit />
         </span>
       </div>
+      <PageSwitcherStairs />
     </div>
   );
 };

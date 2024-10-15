@@ -103,7 +103,7 @@ const Navbar = ({ openNavigation, setOpenNavigation, menu, setMenu }) => {
           <MenuSvg openNavigation={openNavigation} />
         </Button>
         <div
-          className={`absolute z-10 max-sm:hidden top-full right-0 px-4 py-2 dark-bg w-[20rem] ${
+          className={`absolute z-10 border max-sm:hidden top-full right-0 px-4 py-2 dark-bg w-[20rem] ${
             !menu && "hidden"
           } z-[100]`}
           onClick={() => {
