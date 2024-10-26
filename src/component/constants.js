@@ -127,8 +127,8 @@ export const skills = [
   },
   {
     id: 6,
-    name: "Next",
-    title: "Next.JS",
+    name: "Express",
+    title: "Express.js",
     icon: nextJsSvg,
     level: "Begginer",
     count: 30,

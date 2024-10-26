@@ -9,13 +9,7 @@ const PageSwitcherStairs = () => {
           <div
             className={`stair-${index} light-bg overflow-hiddden text-reverse flex items-center text-[4vw] w-[20vw] relative overflow-hidden`}
             key={index}
-          >
-            {index === 0 && "M"}
-            {index === 1 && "ir"}
-            {index === 2 && "ac"}
-            {index === 3 && "le"}
-            {index === 4 && "."}
-          </div>
+          />
         ))}
     </div>
   );

@@ -47,7 +47,7 @@ const App = () => {
   }, [location]);
 
   return (
-    <main className="lg:max-w-screen-lg max-w-full max-md:min-w-full h-full relative w-full min-h-[90vh]">
+    <main className="lg:max-w-screen-lg max-w-full max-md:min-w-full h-full min-h-full relative w-full">
       <Navbar
         openNavigation={openNavigation}
         setOpenNavigation={setOpenNavigation}
@@ -86,6 +86,9 @@ const App = () => {
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </Suspense>
+      </div>
+      <div className="absolute bottom-0 right-0 left-0 py-2 px-8 text-right italic">
+        &copy; {new Date().getFullYear()}, All rights reserved.
       </div>
     </main>
   );

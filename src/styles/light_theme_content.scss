@@ -1,3 +1,6 @@
+@import "./variables";
+@import "./customs";
+
 @mixin customTheme($light-customTheme: true) {
   @if $light-customTheme {
     background: lighten($bg-color, 80%);
@@ -5,6 +8,9 @@
 
     .dark-bg {
       background: lighten($bg-color, 85%);
+    }
+    .sticky.dark-bg {
+      background: #9191916e;
     }
     .light-bg {
       background: $bg-color;

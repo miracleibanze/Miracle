@@ -7,6 +7,8 @@ import PageSwitcherStairs from "./design/PageSwitcherStairs";
 const Contact = () => {
   return (
     <div className="relative w-full flex h-full items-center md:flex-row-reverse flex-col md:justify-center pt-10 max-md:overflow-y-scroll scroll-design lg:gap-16 md:gap-8 gap-12 justify-start">
+      <PageSwitcherStairs />
+
       <div className="md:w-[40%] flex flex-col gap-4 slide-in">
         {contact.map((item) => (
           <div
@@ -41,7 +43,6 @@ const Contact = () => {
         ></textarea>
         <Button2 className=" text-reverse">Send message</Button2>
       </div>
-      <PageSwitcherStairs />
     </div>
   );
 };

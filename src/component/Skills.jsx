@@ -24,6 +24,7 @@ const Skills = () => {
 
   return (
     <div className="grid grid-rows-9 h-full min-w-full gap-4 min-h-full relative justify-center">
+      <PageSwitcherStairs />
       <p className="text-center row-span-1 p-4 max-w-lg mx-auto max-md: px-8">
         I possess a strong foundation in web development, allowing me to create
         efficient and responsive solutions tailored to meet client needs.
@@ -101,7 +102,7 @@ const Skills = () => {
                 </div>
               </div>
               <div
-                className={`px-4 py-2 rounded-md dark-bg ${
+                className={`px-4 py-2 rounded-md dark-bg sticky ${
                   viewIndex !== item.id && "hidden"
                 } sm:w-[20rem] w-full`}
               >
@@ -115,7 +116,6 @@ const Skills = () => {
           </Button2>
         </div>
       </div>
-      <PageSwitcherStairs />
     </div>
   );
 };

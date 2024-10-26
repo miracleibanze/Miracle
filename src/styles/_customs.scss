@@ -45,7 +45,7 @@ i.span {
 }
 
 .light-bg {
-  background: lighten($bg-color, 85%);
+  background: #f4f4f4;
 }
 .text-primary {
   color: $primary-color;
@@ -97,4 +97,41 @@ i.span {
     -2px 0 3px white, 2px 2px 3px white, 2px 2px 3px white;
   font-weight: 900;
   color: $bg-color;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+.font-sans {
+  font-family: var(--font-sora, sans);
+}
+.font-code {
+  font-family: var(--font-code);
+}
+.font-grotesk {
+  font-family: var(--font-grotesk);
+}
+.bg-conic-gradient {
+  background: conic-gradient(
+    from 225deg,
+    #ffc876,
+    #79fff7,
+    #9f53ff,
+    #ff98e2,
+    #ffc876
+  );
+}
+
+.fade-up {
+  animation: fadeUp 0.9s ease-in-out 0.7s forwards;
+}
+
+.scroll-design::-webkit-scrollbar {
+  width: 8px;
+}
+.scroll-design::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: $primary-color;
+  display: flex;
 }

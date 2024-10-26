@@ -9,6 +9,7 @@ const Resume = () => {
 
   return (
     <div className="w-full grid md:grid-cols-3 gap-3 mt-[5vh] max-md:overflow-y-scroll scroll-design max-h-full">
+      <PageSwitcherStairs />
       <div className="relative w-full px-2 max-md:text-center md:pr-4 md:col-span-1 col-span-2 max-sm:px-4">
         <h3 className="h3 font-code tracking-tighter font-semibold">
           Why&nbsp;hire&nbsp;me
@@ -161,7 +162,6 @@ const Resume = () => {
           </div>
         )}
       </div>
-      <PageSwitcherStairs />
     </div>
   );
 };

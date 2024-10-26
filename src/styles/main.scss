@@ -1,7 +1,6 @@
-@import "./variables_custom";
+@import "./variables";
 @import "./animations";
 @import "./customs";
-@import "./light_theme_content";
 
 @mixin rotate($index: 360) {
   @for $i from 0 through $index {

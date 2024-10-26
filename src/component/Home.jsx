@@ -14,10 +14,11 @@ const Home = ({ setDirectDestination }) => {
 
   return (
     <div className="w-full flex md:flex-row flex-col items-center justify-between md:h-[80vh]">
+      <PageSwitcherStairs />
       <div className="md:w-[60%] w-full aspect-auto light fade-down py-16 px-8 rounded-3xl">
         <p className="tagline">Front-End Developer</p>
         <div className="sm:h2 h3 font-semibold font-code tracking-tight leading-none mb-3">
-          Hello I'm
+          Hello, I'm
           <br />
           <span className="sm:h1 h2 text-primary">IBANZE Miracle</span>
         </div>
@@ -56,7 +57,6 @@ const Home = ({ setDirectDestination }) => {
           className="absolute inset-0 object-contain opacity object-top opacity"
         />
       </div>
-      <PageSwitcherStairs />
     </div>
   );
 };
