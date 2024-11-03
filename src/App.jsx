@@ -47,7 +47,7 @@ const App = () => {
   }, [location]);
 
   return (
-    <main className="lg:max-w-screen-lg max-w-full max-md:min-w-full h-full min-h-full relative w-full flex justify-between flex-col items-center">
+    <main className="lg:max-w-screen-lg max-w-full max-md:min-w-full h-full min-h-full relative w-full">
       <Navbar
         openNavigation={openNavigation}
         setOpenNavigation={setOpenNavigation}
@@ -55,7 +55,7 @@ const App = () => {
         setMenu={setMenu}
       />
       <div
-        className="absolute top-[4rem] bottom-10 h-full max-h-[85%] w-full max-md:px-8 pb-16"
+        className="absolute top-[4rem] bottom-10 h-full max-h-[85%] w-full max-md:px-8"
         onClick={() => {
           if (openNavigation) {
             setOpenNavigation(false);
@@ -87,7 +87,7 @@ const App = () => {
           </Routes>
         </Suspense>
       </div>
-      <div className="absolute bottom-0 right-0 left-0 py-2 px-8 text-right italic vertical">
+      <div className="fixed bottom-0 right-0 left-0 py-2 px-8 text-right italic vertical">
         &copy; {new Date().getFullYear()}, All rights reserved.
       </div>
     </main>
