@@ -16,7 +16,7 @@ const Button = ({
 
   const spanClasses = `relative py-1 ${underline && "navLink-Underline"} ${
     zIndex ? zIndex : "z-10"
-  } ${white && "bg-white -my-3 py-3 -mx-2 px-3"}`;
+  } ${white && "bg-white -my-3 py-3 -mx-2 px-3 rounded-tr-2xl"}`;
 
   const renderButton = () => (
     <button className={classes} onClick={onClick}>

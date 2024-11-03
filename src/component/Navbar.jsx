@@ -52,7 +52,7 @@ const Navbar = ({ openNavigation, setOpenNavigation, menu, setMenu }) => {
 
   return (
     <>
-      <div className="flex items-center justify-between w-full font-semibold py-2 relative">
+      <nav className="flex items-center justify-between w-full font-semibold py-2 relative">
         <h4
           className="h4 font-bold cursor-pointer"
           onClick={() => navigate("/")}
@@ -117,7 +117,7 @@ const Navbar = ({ openNavigation, setOpenNavigation, menu, setMenu }) => {
           </span>
         </div>
         {openNavigation && navContent}
-      </div>
+      </nav>
       <ButtonGradient />
     </>
   );

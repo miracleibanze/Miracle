@@ -135,3 +135,25 @@ i.span {
   background-color: $primary-color;
   display: flex;
 }
+
+nav {
+  animation: nav 1s ease-in-out forwards;
+}
+
+@keyframes nav {
+  0% {
+    display: none;
+  }
+  60% {
+    display: none;
+  }
+  100% {
+    display: flex;
+  }
+}
+@media (max-width: 786px) {
+  .vertical {
+    writing-mode: vertical-rl;
+    padding-right: 0;
+  }
+}

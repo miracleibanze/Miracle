@@ -6,7 +6,7 @@ import PageSwitcherStairs from "./design/PageSwitcherStairs";
 
 const Contact = () => {
   return (
-    <div className="relative w-full flex h-full items-center md:flex-row-reverse flex-col md:justify-center pt-10 max-md:overflow-y-scroll scroll-design lg:gap-16 md:gap-8 gap-12 justify-start">
+    <div className="relative w-full flex h-full items-start md:flex-row-reverse flex-col md:justify-center pt-10 scroll-design lg:gap-16 md:gap-8 gap-12 justify-start max-h-full overflow-y-scroll">
       <PageSwitcherStairs />
 
       <div className="md:w-[40%] flex flex-col gap-4 slide-in">
