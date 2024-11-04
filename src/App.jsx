@@ -87,7 +87,7 @@ const App = () => {
           </Routes>
         </Suspense>
       </div>
-      <div className="fixed bottom-0 right-0 left-0 py-2 px-8 text-right italic vertical">
+      <div className="fixed bottom-0 right-0 left-0 py-2 px-8 text-right italic vertical text-zinc-900/80">
         &copy; {new Date().getFullYear()}, All rights reserved.
       </div>
     </main>

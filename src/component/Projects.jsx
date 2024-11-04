@@ -27,7 +27,7 @@ const Projects = ({ setDirectDestination }) => {
   };
 
   return (
-    <div className="relative w-full flex h-full items-center md:flex-row-reverse flex-col md:justify-center pt-10 max-md:overflow-y-scroll scroll-design">
+    <div className="relative w-full flex h-full items-start md:flex-row-reverse flex-col md:justify-center pt-10 max-md:overflow-y-scroll scroll-design">
       <PageSwitcherStairs />
 
       <div className="md:min-h-[25rem] md:w-1/2 w-full fade-up max-md:max-w-[30rem] max-md:aspect-[13/11] relative flex flex-col place-content-start">
